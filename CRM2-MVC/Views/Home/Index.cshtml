@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Página Principal";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bem vindo!!</h1>
+    <div>
+        <h4>Lead:</h4>
+        <a class="btn btn-primary d-flex" role="button" asp-controller="Leads" asp-action="Create">Adicionar Nova Lead</a>
+        <a class="btn btn-primary d-flex" role="button" asp-controller="Leads" asp-action="Index">Visualizar Leads</a>
+    </div>
+
+    <div>
+        <h4>Cursos:</h4>
+        <a class="btn btn-primary d-flex" role="button" asp-controller="Courses" asp-action="Create">Adicionar Novo Curso</a>
+        <a class="btn btn-primary d-flex" role="button" asp-controller="Courses" asp-action="Index">Visualizar Cursos</a>
+    </div>
+
+    <div>
+        <h4>Matrículas:</h4>
+        <a class="btn btn-primary d-flex" role="button" asp-controller="Courses" asp-action="CreateEnrollment">Adicionar Nova Matrícula</a>
+        <a class="btn btn-primary d-flex" role="button" asp-controller="Courses" asp-action="Enrollments">Visualizar Matrículas</a>
+    </div>
+</div>

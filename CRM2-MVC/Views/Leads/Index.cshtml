@@ -1,0 +1,40 @@
+﻿@model List<LeadModel>
+@{
+    ViewData["Title"] = "Leads atuáis";
+}
+<h1 class="display-4">@ViewData["Title"]:</h1>
+
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">CPF</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Email</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if(Model != null && Model.Any())
+            {
+                foreach(LeadModel lead in Model)
+                {
+                    <tr>
+                        <th scope="row">@lead.LeadId</th>
+                        <th scope="row">@lead.Cpf</th>
+                        <td>@lead.Name</td>
+                        <td>@lead.Email</td>
+                        <td>
+                            !!!!! REMOVER ESSES BOTÕES
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a role="button" class="btn btn-primary">Editar</a>
+                                <a role="button" class="btn btn-danger">Apagar</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

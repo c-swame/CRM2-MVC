@@ -1,0 +1,25 @@
+﻿@model CourseModel
+@{
+    ViewData["Title"] = "Criar Lead";
+}
+<h1 class="display-4">@ViewData["Title"]:</h1>
+
+<div>
+    <section>
+        <form name="courseForm" asp-controller="Courses" asp-action="Create" method="post">
+            <fieldset class="mb-3">
+                <legend for="courseNameInput" class="form-label">Nome do Curso:</legend>
+                <input type="text" asp-for="CourseName" class="form-control" id="courseNameInput" placeholder="digite o nome do curso">
+            </fieldset>
+            <fieldset class="mb-3">
+                <legend for="courseDurationInput" class="form-label">Duração do Curso:</legend>
+                <input type="number" asp-for="DurationInHours" class="form-control" id="courseDurationInput" placeholder="digite a duração do curso em horas">
+            </fieldset>
+            <fieldset class="btn-group">
+                <button type="submit" class="btn btn-primary d-flex">Cadastrar Novo Curso</button>
+                <a role="button" class="btn btn-secondary d-flex" asp-controller="Home" asp-action="Index">Voltar</a>
+            </fieldset>
+        </form>
+    </section>
+
+</div>
