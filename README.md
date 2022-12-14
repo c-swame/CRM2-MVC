@@ -18,7 +18,7 @@ E as matrículas são as relações pessoa-curso;
 
 
 ## Configurações Iniciais e uso
-- Após clonar o repositório, o primeiro passo é configurar a string de conexão com o banco de dados no arquivo appsettings.json -> ConnectionStrings.DataBase.
+- Após clonar o repositório, o primeiro passo é configurar a string de conexão com o banco de dados no arquivo appsettings -> ConnectionStrings.DataBase.
 Lá há um exemplo de string de conexão que deve ser utilizado para conectar ao sqlserver.
 
 - Em seguida basta rodar o comando
