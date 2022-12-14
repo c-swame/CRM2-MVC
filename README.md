@@ -9,11 +9,11 @@ E as matrículas são as relações pessoa-curso;
 
 ## Funções
 
-- [x] Criar novas leads (candidatos);
+- [x] Criar novas leads (candidatos); /
 
-- [x] Criar novos cursos;
+- [x] Criar novos cursos;/
 
-- [x] Fazer novas matrículas. Cada aluno pode ter vários cursos.
+- [x] Fazer novas matrículas. Cada aluno pode ter vários cursos./
 
 
 
