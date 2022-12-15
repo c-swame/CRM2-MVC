@@ -26,8 +26,6 @@ namespace CRM2_MVC.Controllers
         {
             LeadModel newLead = _repository.AddOne(leadData);
 
-            // return new ObjectResult(newLead) { StatusCode = StatusCodes.Status201Created };
-            // !!!!! Como faz para retornar o status 201 e ainda fazer o redirect?
             return RedirectToAction("Index");
         }
     }
