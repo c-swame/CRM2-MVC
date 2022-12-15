@@ -1,0 +1,39 @@
+﻿@model LeadModel
+@{
+    ViewData["Title"] = "Criar Lead";
+}
+<h1 class="display-4">@ViewData["Title"]:</h1>
+
+<div>
+    <section>
+        <form name="leadForm" asp-controller="Leads" asp-action="Create" method="post">
+            <fieldset class="mb-3">
+                <legend for="leadEmailInput" class="form-label">Email:</legend>
+                <input type="email" asp-for="Email" class="form-control" id="leadEmailInput" placeholder="name@example.com">
+            </fieldset>
+            <fieldset class="mb-3">
+                <legend for="leadNameInput" class="form-label">Nome:</legend>
+                <input type="text" asp-for="Name" class="form-control" id="leadNameInput" placeholder="Name">
+            </fieldset>
+            <fieldset class="mb-3">
+                <legend for="leadCpfInput" class="form-label">CPF:</legend>
+                <input type="text"
+                       asp-for="Cpf"
+                       name="cpf"
+                       pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"
+                       class="form-control"
+                       id="leadCpfInput"
+                       placeholder="nnn.nnn.nnn-nn (digite apenas os números)"
+                       maxlength="11"
+                       title="Digite um CPF no formato: nnn.nnn.nnn-nn (apenas números)"
+                       oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                <small id="cpfInputHelp" class="form-text text-muted d-flex">Insira apenas os números do cpf</small>
+            </fieldset>
+            <fieldset class="btn-group">
+                <button type="submit" class="btn btn-primary d-flex" >Cadastrar Lead</button>
+                <a role="button" class="btn btn-secondary d-flex" asp-controller="Home" asp-action="Index">Voltar</a>
+            </fieldset>
+        </form>
+    </section>
+
+</div>

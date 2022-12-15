@@ -1,0 +1,25 @@
+﻿@model EnrollmentModel
+@{
+    ViewData["Title"] = "Criar Lead";
+}
+<h1 class="display-4">@ViewData["Title"]:</h1>
+
+<div>
+    <section>
+        <form name="enrollmentForm" asp-controller="Courses" asp-action="CreateEnrollment" method="post">
+            <fieldset class="mb-3">
+                <legend for="courseIdInput" class="form-label">Id do Curso:</legend>
+                <input type="number" asp-for="CourseId" class="form-control" id="courseIdInput" placeholder="id do curso">
+            </fieldset>
+            <fieldset class="mb-3">
+                <legend for="leadIdInput" class="form-label">Id do Aluno</legend>
+                <input type="number" asp-for="LeadId" class="form-control" id="leadIdInput" placeholder="id do aluno">
+            </fieldset>
+            <fieldset class="btn-group">
+                <button type="submit" class="btn btn-primary d-flex">Cadastrar Matrícula</button>
+                <a role="button" class="btn btn-secondary d-flex" asp-controller="Home" asp-action="Index">Voltar</a>
+            </fieldset>
+        </form>
+    </section>
+
+</div>
