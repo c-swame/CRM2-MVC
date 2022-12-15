@@ -25,7 +25,7 @@ Lá há um exemplo de string de conexão que deve ser utilizado para conectar ao
 ```
 dotnet restore
 ```
-ou equivalente para instalar as dependências.
+ou equivalente para instalar as dependências (no visual studio basta selecionar a solução "CRM2-MVC.sln").
 
 - Gerar as migrations e o banco de dados que será utilizado pelo aplicativo, com os comandos:
 ```
