@@ -23,6 +23,16 @@ namespace CRM2_MVC.Repository
 
         public LeadModel AddOne(LeadModel leadData)
         {
+            var leadCpf = leadData.Cpf;
+            CPFCNPJ.IMain validator = new CPFCNPJ.Main();
+
+            var isValid = validator.IsValidCPFCNPJ(leadCpf);
+
+            if (!isValid)
+            {
+                throw new InvalidDataException("Invalid CPF");
+            }
+
             _context.Leads.Add(leadData);
             _context.SaveChanges(); 
             return leadData;
